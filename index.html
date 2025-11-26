@@ -1,23 +1,1065 @@
 <!DOCTYPE html>
-<style>
-  /* netnet default bg */
-  body {
-    margin: 0;
-    background-image: linear-gradient(#515199a8 2px, transparent 1px),
-      linear-gradient(90deg, #515199a8 2px, transparent 1px);
-    background-size: 50px 50px;
-    position: relative;
-    z-index: 1;
-    overflow: hidden;
-  }
-
-  body::before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    width: 100vw;
-    height: 100vh;
-    background: linear-gradient(0deg, #c76ebca8, #515199a8);
-  }
-</style>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./vars.css">
+  <link rel="stylesheet" href="./style.css">
+  
+  
+  <style>
+   a,
+   button,
+   input,
+   select,
+   h1,
+   h2,
+   h3,
+   h4,
+   h5,
+   * {
+       box-sizing: border-box;
+       margin: 0;
+       padding: 0;
+       border: none;
+       text-decoration: none;
+       background: none;
+   
+       -webkit-font-smoothing: antialiased;
+   }
+   
+   menu, ol, ul {
+       list-style-type: none;
+       margin: 0;
+       padding: 0;
+   }
+    
+    .my-top-picks,
+.my-top-picks * {
+  box-sizing: border-box;
+}
+.my-top-picks {
+  background: var(--soft-grey, #f2f2f2);
+  height: 2825px;
+  position: relative;
+  overflow: hidden;
+}
+.rectangle-27 {
+  width: 1440px;
+  height: 482px;
+  position: absolute;
+  left: 0px;
+  top: 120px;
+  object-fit: cover;
+}
+.my-top-picks2 {
+  color: var(--soft-grey, #f2f2f2);
+  text-align: left;
+  font-family: "SpaceMono-Bold", sans-serif;
+  font-size: 96px;
+  line-height: var(--static-display-medium-line-height, 52px);
+  font-weight: 700;
+  position: absolute;
+  left: 120px;
+  top: 321px;
+  width: 780px;
+  height: 218px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+.drinks {
+  color: var(--charcoal, #333333);
+  text-align: left;
+  font-family: "NicoMoji-Regular", sans-serif;
+  font-size: 40px;
+  line-height: var(--static-display-medium-line-height, 52px);
+  font-weight: 400;
+  position: absolute;
+  left: 120px;
+  top: 673px;
+  width: 484px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.rectangle-29 {
+  width: 387px;
+  height: 364px;
+  position: absolute;
+  left: 120px;
+  top: 731px;
+  object-fit: cover;
+}
+._1-bubble-tea {
+  color: var(--charcoal, #333333);
+  text-align: left;
+  font-family: "-", sans-serif;
+  font-size: 30px;
+  line-height: var(--static-display-medium-line-height, 52px);
+  font-weight: 400;
+  position: absolute;
+  left: 120px;
+  top: 1095px;
+  width: 387px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+._1-bubble-tea-span {
+  font-family: "WorkSans-Bold", sans-serif;
+  line-height: 52px;
+  font-weight: 700;
+}
+._1-bubble-tea-span2 {
+  font-family: "WorkSans-Medium", sans-serif;
+  line-height: 52px;
+  font-weight: 500;
+}
+.rectangle-30 {
+  width: 386px;
+  height: 364px;
+  position: absolute;
+  left: 527px;
+  top: 731px;
+  object-fit: cover;
+}
+._2-matcha {
+  color: var(--charcoal, #333333);
+  text-align: left;
+  font-family: "-", sans-serif;
+  font-size: 30px;
+  line-height: var(--static-display-medium-line-height, 52px);
+  font-weight: 400;
+  position: absolute;
+  left: 527px;
+  top: 1095px;
+  width: 386px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+._2-matcha-span {
+  font-family: "WorkSans-Bold", sans-serif;
+  line-height: 52px;
+  font-weight: 700;
+}
+._2-matcha-span2 {
+  font-family: "WorkSans-Medium", sans-serif;
+  line-height: 52px;
+  font-weight: 500;
+}
+.rectangle-31 {
+  width: 387px;
+  height: 364px;
+  position: absolute;
+  left: 933px;
+  top: 731px;
+  object-fit: cover;
+}
+._3-milk-tea {
+  color: var(--charcoal, #333333);
+  text-align: left;
+  font-family: "-", sans-serif;
+  font-size: 30px;
+  line-height: var(--static-display-medium-line-height, 52px);
+  font-weight: 400;
+  position: absolute;
+  left: 933px;
+  top: 1095px;
+  width: 386px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+._3-milk-tea-span {
+  font-family: "WorkSans-Bold", sans-serif;
+  line-height: 52px;
+  font-weight: 700;
+}
+._3-milk-tea-span2 {
+  font-family: "WorkSans-Medium", sans-serif;
+  line-height: 52px;
+  font-weight: 500;
+}
+.rectangle-32 {
+  width: 387px;
+  height: 364px;
+  position: absolute;
+  left: 120px;
+  top: 1296px;
+  object-fit: cover;
+}
+._1-macarons {
+  color: var(--charcoal, #333333);
+  text-align: left;
+  font-family: "-", sans-serif;
+  font-size: 30px;
+  line-height: var(--static-display-medium-line-height, 52px);
+  font-weight: 400;
+  position: absolute;
+  left: 120px;
+  top: 1660px;
+  width: 387px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+._1-macarons-span {
+  font-family: "WorkSans-Bold", sans-serif;
+  line-height: 52px;
+  font-weight: 700;
+}
+._1-macarons-span2 {
+  font-family: "WorkSans-Medium", sans-serif;
+  line-height: 52px;
+  font-weight: 500;
+}
+.rectangle-33 {
+  width: 386px;
+  height: 364px;
+  position: absolute;
+  left: 527px;
+  top: 1296px;
+  object-fit: cover;
+}
+._2-chocolate-babka {
+  color: var(--charcoal, #333333);
+  text-align: left;
+  font-family: "-", sans-serif;
+  font-size: 30px;
+  line-height: var(--static-display-medium-line-height, 52px);
+  font-weight: 400;
+  position: absolute;
+  left: 527px;
+  top: 1660px;
+  width: 386px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+._2-chocolate-babka-span {
+  font-family: "WorkSans-Bold", sans-serif;
+  line-height: 52px;
+  font-weight: 700;
+}
+._2-chocolate-babka-span2 {
+  font-family: "WorkSans-Medium", sans-serif;
+  line-height: 52px;
+  font-weight: 500;
+}
+.rectangle-34 {
+  width: 387px;
+  height: 364px;
+  position: absolute;
+  left: 933px;
+  top: 1296px;
+  object-fit: cover;
+}
+._3-mango-sticky-rice {
+  color: var(--charcoal, #333333);
+  text-align: left;
+  font-family: "-", sans-serif;
+  font-size: 30px;
+  line-height: var(--static-display-medium-line-height, 52px);
+  font-weight: 400;
+  position: absolute;
+  left: 933px;
+  top: 1660px;
+  width: 386px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+._3-mango-sticky-rice-span {
+  font-family: "WorkSans-Bold", sans-serif;
+  line-height: 52px;
+  font-weight: 700;
+}
+._3-mango-sticky-rice-span2 {
+  font-family: "WorkSans-Medium", sans-serif;
+  line-height: 52px;
+  font-weight: 500;
+}
+.rectangle-35 {
+  width: 387px;
+  height: 364px;
+  position: absolute;
+  left: 120px;
+  top: 1861px;
+  overflow: visible;
+  object-fit: cover;
+}
+._1-japanese-steak-lunch {
+  color: var(--charcoal, #333333);
+  text-align: left;
+  font-family: "-", sans-serif;
+  font-size: 30px;
+  line-height: var(--static-display-medium-line-height, 52px);
+  font-weight: 400;
+  position: absolute;
+  left: 120px;
+  top: 2225px;
+  width: 387px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+._1-japanese-steak-lunch-span {
+  font-family: "WorkSans-Bold", sans-serif;
+  line-height: 52px;
+  font-weight: 700;
+}
+._1-japanese-steak-lunch-span2 {
+  font-family: "WorkSans-Medium", sans-serif;
+  line-height: 52px;
+  font-weight: 500;
+}
+.rectangle-36 {
+  width: 386px;
+  height: 364px;
+  position: absolute;
+  left: 527px;
+  top: 1861px;
+  object-fit: cover;
+}
+._2-raku-s-udon {
+  color: var(--charcoal, #333333);
+  text-align: left;
+  font-family: "-", sans-serif;
+  font-size: 30px;
+  line-height: var(--static-display-medium-line-height, 52px);
+  font-weight: 400;
+  position: absolute;
+  left: 527px;
+  top: 2225px;
+  width: 386px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+._2-raku-s-udon-span {
+  font-family: "WorkSans-Bold", sans-serif;
+  line-height: 52px;
+  font-weight: 700;
+}
+._2-raku-s-udon-span2 {
+  font-family: "WorkSans-Medium", sans-serif;
+  line-height: 52px;
+  font-weight: 500;
+}
+.rectangle-37 {
+  width: 387px;
+  height: 364px;
+  position: absolute;
+  left: 933px;
+  top: 1861px;
+  object-fit: cover;
+}
+._3-chicken-waffles {
+  color: var(--charcoal, #333333);
+  text-align: left;
+  font-family: "-", sans-serif;
+  font-size: 30px;
+  line-height: var(--static-display-medium-line-height, 52px);
+  font-weight: 400;
+  position: absolute;
+  left: 933px;
+  top: 2225px;
+  width: 386px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+._3-chicken-waffles-span {
+  font-family: "WorkSans-Bold", sans-serif;
+  line-height: 52px;
+  font-weight: 700;
+}
+._3-chicken-waffles-span2 {
+  font-family: "WorkSans-Medium", sans-serif;
+  line-height: 52px;
+  font-weight: 500;
+}
+.snacks-desserts {
+  color: var(--charcoal, #333333);
+  text-align: left;
+  font-family: "NicoMoji-Regular", sans-serif;
+  font-size: 40px;
+  line-height: var(--static-display-medium-line-height, 52px);
+  font-weight: 400;
+  position: absolute;
+  left: 120px;
+  top: 1238px;
+  width: 484px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.food {
+  color: var(--charcoal, #333333);
+  text-align: left;
+  font-family: "NicoMoji-Regular", sans-serif;
+  font-size: 40px;
+  line-height: var(--static-display-medium-line-height, 52px);
+  font-weight: 400;
+  position: absolute;
+  left: 120px;
+  top: 1803px;
+  width: 484px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.rectangle-9 {
+  background: var(--pure-white, #ffffff);
+  width: 1440px;
+  height: 120px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.group-11 {
+  width: 384px;
+  height: 120px;
+  position: absolute;
+  left: 60px;
+  top: 0px;
+}
+.group-112 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0%;
+  left: 0%;
+  bottom: 0%;
+  top: 0%;
+}
+.the-fan-club {
+  color: var(--charcoal, #333333);
+  text-align: center;
+  font-family: "NicoMoji-Regular", sans-serif;
+  font-size: 45px;
+  line-height: var(--static-display-medium-line-height, 52px);
+  font-weight: 400;
+  position: absolute;
+  right: 0%;
+  left: 0%;
+  width: 100%;
+  bottom: 0%;
+  top: 0%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.food-edition {
+  color: var(--charcoal, #333333);
+  text-align: center;
+  font-family: "SpaceMono-Regular", sans-serif;
+  font-size: 22px;
+  line-height: var(--static-display-medium-line-height, 52px);
+  font-weight: 400;
+  position: absolute;
+  right: 6.25%;
+  left: 6.25%;
+  width: 87.5%;
+  bottom: 2.5%;
+  top: 63.33%;
+  height: 34.17%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.group-19 {
+  position: absolute;
+  inset: 0;
+}
+.food-review {
+  width: 195px;
+  height: 41px;
+  position: absolute;
+  left: 755px;
+  top: 76px;
+}
+.food-review2 {
+  color: #7e7e7e;
+  text-align: center;
+  font-family: "SpaceMono-Regular", sans-serif;
+  font-size: 22px;
+  line-height: var(--static-display-medium-line-height, 52px);
+  font-weight: 400;
+  position: absolute;
+  right: 0%;
+  left: 0%;
+  width: 100%;
+  bottom: 0%;
+  top: 0%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.top-picks {
+  width: 176px;
+  height: 41px;
+  position: absolute;
+  left: 950px;
+  top: 76px;
+}
+.top-picks2 {
+  color: var(--charcoal, #333333);
+  text-align: center;
+  font-family: "SpaceMono-Regular", sans-serif;
+  font-size: 22px;
+  line-height: var(--static-display-medium-line-height, 52px);
+  font-weight: 400;
+  position: absolute;
+  right: 0%;
+  left: 0%;
+  width: 100%;
+  bottom: 0%;
+  top: 0%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.about {
+  width: 140px;
+  height: 41px;
+  position: absolute;
+  left: 1126px;
+  top: 76px;
+}
+.about2 {
+  color: #7e7e7e;
+  text-align: center;
+  font-family: "SpaceMono-Regular", sans-serif;
+  font-size: 22px;
+  line-height: var(--static-display-medium-line-height, 52px);
+  font-weight: 400;
+  position: absolute;
+  right: 0%;
+  left: 0%;
+  width: 100%;
+  bottom: 0%;
+  top: 0%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact {
+  width: 136px;
+  height: 41px;
+  position: absolute;
+  left: 1266px;
+  top: 76px;
+}
+.contact2 {
+  color: #7e7e7e;
+  text-align: center;
+  font-family: "SpaceMono-Regular", sans-serif;
+  font-size: 22px;
+  line-height: var(--static-display-medium-line-height, 52px);
+  font-weight: 400;
+  position: absolute;
+  right: 0%;
+  left: 0%;
+  width: 100%;
+  bottom: 0%;
+  top: 0%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rectangle-10 {
+  background: var(--charcoal, #333333);
+  width: 1440px;
+  height: 422px;
+  position: absolute;
+  left: 0px;
+  top: 2403px;
+}
+.frame-5 {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 205px;
+  position: absolute;
+  left: 633px;
+  top: 2481px;
+}
+.explore {
+  color: var(--pure-white, #ffffff);
+  text-align: left;
+  font-family: "SpaceMono-Bold", sans-serif;
+  font-size: 22px;
+  line-height: var(--static-display-medium-line-height, 52px);
+  font-weight: 700;
+  position: relative;
+  align-self: stretch;
+  height: 41px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.about3 {
+  flex-shrink: 0;
+  width: 205px;
+  height: 41px;
+  position: relative;
+}
+.about4 {
+  color: var(--pure-white, #ffffff);
+  text-align: left;
+  font-family: "SpaceMono-Regular", sans-serif;
+  font-size: 22px;
+  line-height: var(--static-display-medium-line-height, 52px);
+  font-weight: 400;
+  text-decoration: underline;
+  position: absolute;
+  right: 0%;
+  left: 0%;
+  width: 100%;
+  bottom: 0%;
+  top: 0%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.food-review3 {
+  flex-shrink: 0;
+  width: 205px;
+  height: 41px;
+  position: relative;
+}
+.food-review4 {
+  color: var(--pure-white, #ffffff);
+  text-align: left;
+  font-family: "SpaceMono-Regular", sans-serif;
+  font-size: 22px;
+  line-height: var(--static-display-medium-line-height, 52px);
+  font-weight: 400;
+  text-decoration: underline;
+  position: absolute;
+  right: 0%;
+  left: 0%;
+  width: 100%;
+  bottom: 0%;
+  top: 0%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.my-top-picks3 {
+  flex-shrink: 0;
+  width: 205px;
+  height: 41px;
+  position: relative;
+}
+.my-top-picks4 {
+  color: var(--pure-white, #ffffff);
+  text-align: left;
+  font-family: "SpaceMono-Regular", sans-serif;
+  font-size: 22px;
+  line-height: var(--static-display-medium-line-height, 52px);
+  font-weight: 400;
+  text-decoration: underline;
+  position: absolute;
+  right: 0%;
+  left: 0%;
+  width: 100%;
+  bottom: 0%;
+  top: 0%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.contact3 {
+  flex-shrink: 0;
+  width: 205px;
+  height: 41px;
+  position: relative;
+}
+.contact4 {
+  color: var(--pure-white, #ffffff);
+  text-align: left;
+  font-family: "SpaceMono-Regular", sans-serif;
+  font-size: 22px;
+  line-height: var(--static-display-medium-line-height, 52px);
+  font-weight: 400;
+  text-decoration: underline;
+  position: absolute;
+  right: 0%;
+  left: 0%;
+  width: 100%;
+  bottom: 0%;
+  top: 0%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.frame-6 {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 167px;
+  position: absolute;
+  left: 865px;
+  top: 2481px;
+}
+.follow-me {
+  color: var(--pure-white, #ffffff);
+  text-align: left;
+  font-family: "SpaceMono-Bold", sans-serif;
+  font-size: 22px;
+  line-height: var(--static-display-medium-line-height, 52px);
+  font-weight: 700;
+  position: relative;
+  align-self: stretch;
+  height: 41px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.instagram {
+  flex-shrink: 0;
+  width: 167px;
+  height: 41px;
+  position: relative;
+}
+.instagram2 {
+  color: var(--pure-white, #ffffff);
+  text-align: left;
+  font-family: "SpaceMono-Regular", sans-serif;
+  font-size: 22px;
+  line-height: var(--static-display-medium-line-height, 52px);
+  font-weight: 400;
+  text-decoration: underline;
+  position: absolute;
+  right: 0%;
+  left: 0%;
+  width: 100%;
+  bottom: 0%;
+  top: 0%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.linkedin {
+  flex-shrink: 0;
+  width: 167px;
+  height: 41px;
+  position: relative;
+}
+.linkedin2 {
+  color: var(--pure-white, #ffffff);
+  text-align: left;
+  font-family: "SpaceMono-Regular", sans-serif;
+  font-size: 22px;
+  line-height: var(--static-display-medium-line-height, 52px);
+  font-weight: 400;
+  text-decoration: underline;
+  position: absolute;
+  right: 0%;
+  left: 0%;
+  width: 100%;
+  bottom: 0%;
+  top: 0%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.updates-news-sign-up-with-your-email {
+  color: #ffffff;
+  text-align: left;
+  font-family: "SpaceMono-Bold", sans-serif;
+  font-size: 22px;
+  line-height: 36px;
+  font-weight: 700;
+  position: absolute;
+  left: 1042px;
+  top: 2497px;
+  width: 310px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.email {
+  width: 310px;
+  height: 66px;
+  position: absolute;
+  left: 1042px;
+  top: 2577px;
+}
+.rectangle-11 {
+  background: var(--pure-white, #ffffff);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0%;
+  left: 0%;
+  bottom: 0%;
+  top: 0%;
+}
+.email-address {
+  color: #d8d8d8;
+  text-align: left;
+  font-family: "WorkSans-Regular", sans-serif;
+  font-size: 22px;
+  line-height: 36px;
+  font-weight: 400;
+  position: absolute;
+  right: 0%;
+  left: 4.84%;
+  width: 95.16%;
+  bottom: 15.15%;
+  top: 15.15%;
+  height: 69.7%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.footer-sign-up {
+  width: 168px;
+  height: 55px;
+  position: absolute;
+  left: 1042px;
+  top: 2659px;
+}
+.rectangle-12 {
+  background: var(--warm-beige, #e6dac6);
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0%;
+  left: 0%;
+  bottom: 0%;
+  top: 0%;
+}
+.sign-up {
+  color: var(--charcoal, #333333);
+  text-align: center;
+  font-family: "SpaceMono-Regular", sans-serif;
+  font-size: 22px;
+  line-height: 36px;
+  font-weight: 400;
+  position: absolute;
+  right: 9.52%;
+  left: 8.93%;
+  width: 81.55%;
+  bottom: 7.27%;
+  top: 9.09%;
+  height: 83.64%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.white-logo {
+  width: 384px;
+  height: 120px;
+  position: absolute;
+  left: 66px;
+  top: 2451px;
+}
+.the-fan-club2 {
+  color: var(--pure-white, #ffffff);
+  text-align: center;
+  font-family: "NicoMoji-Regular", sans-serif;
+  font-size: 45px;
+  line-height: var(--static-display-medium-line-height, 52px);
+  font-weight: 400;
+  position: absolute;
+  right: 0%;
+  left: 0%;
+  width: 100%;
+  bottom: 0%;
+  top: 0%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.food-edition2 {
+  color: var(--pure-white, #ffffff);
+  text-align: center;
+  font-family: "SpaceMono-Regular", sans-serif;
+  font-size: 22px;
+  line-height: var(--static-display-medium-line-height, 52px);
+  font-weight: 400;
+  position: absolute;
+  right: 6.25%;
+  left: 6.25%;
+  width: 87.5%;
+  bottom: 0%;
+  top: 65.83%;
+  height: 34.17%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+   </style>
+  <title>Document</title>
+</head>
+<body>
+  <div class="my-top-picks">
+    <img class="rectangle-27" src="rectangle-270.png" />
+    <div class="my-top-picks2">My Top Picks</div>
+    <div class="drinks">Drinks</div>
+    <img class="rectangle-29" src="rectangle-290.png" />
+    <div class="_1-bubble-tea">
+      <span>
+        <span class="_1-bubble-tea-span">#1</span>
+        <span class="_1-bubble-tea-span2">Bubble Tea</span>
+      </span>
+    </div>
+    <img class="rectangle-30" src="rectangle-300.png" />
+    <div class="_2-matcha">
+      <span>
+        <span class="_2-matcha-span">#2</span>
+        <span class="_2-matcha-span2">Matcha</span>
+      </span>
+    </div>
+    <img class="rectangle-31" src="rectangle-310.png" />
+    <div class="_3-milk-tea">
+      <span>
+        <span class="_3-milk-tea-span">#3</span>
+        <span class="_3-milk-tea-span2">Milk Tea</span>
+      </span>
+    </div>
+    <img class="rectangle-32" src="rectangle-320.png" />
+    <div class="_1-macarons">
+      <span>
+        <span class="_1-macarons-span">#1</span>
+        <span class="_1-macarons-span2">Macarons</span>
+      </span>
+    </div>
+    <img class="rectangle-33" src="rectangle-330.png" />
+    <div class="_2-chocolate-babka">
+      <span>
+        <span class="_2-chocolate-babka-span">#2</span>
+        <span class="_2-chocolate-babka-span2">Chocolate Babka</span>
+      </span>
+    </div>
+    <img class="rectangle-34" src="rectangle-340.png" />
+    <div class="_3-mango-sticky-rice">
+      <span>
+        <span class="_3-mango-sticky-rice-span">#3</span>
+        <span class="_3-mango-sticky-rice-span2">Mango Sticky Rice</span>
+      </span>
+    </div>
+    <img class="rectangle-35" src="rectangle-350.svg" />
+    <div class="_1-japanese-steak-lunch">
+      <span>
+        <span class="_1-japanese-steak-lunch-span">#1</span>
+        <span class="_1-japanese-steak-lunch-span2">Japanese Steak Lunch</span>
+      </span>
+    </div>
+    <img class="rectangle-36" src="rectangle-360.png" />
+    <div class="_2-raku-s-udon">
+      <span>
+        <span class="_2-raku-s-udon-span">#2</span>
+        <span class="_2-raku-s-udon-span2">Raku’s Udon</span>
+      </span>
+    </div>
+    <img class="rectangle-37" src="rectangle-370.png" />
+    <div class="_3-chicken-waffles">
+      <span>
+        <span class="_3-chicken-waffles-span">#3</span>
+        <span class="_3-chicken-waffles-span2">Chicken + Waffles</span>
+      </span>
+    </div>
+    <div class="snacks-desserts">Snacks/Desserts</div>
+    <div class="food">Food</div>
+    <div class="rectangle-9"></div>
+    <div class="group-11">
+      <div class="group-112">
+        <div class="the-fan-club">The Fan Club</div>
+        <div class="food-edition">Food Edition</div>
+      </div>
+    </div>
+    <div class="food-review">
+      <div class="food-review2">Food Review</div>
+    </div>
+    <div class="top-picks">
+      <div class="top-picks2">Top Picks</div>
+    </div>
+    <div class="about">
+      <div class="about2">About</div>
+    </div>
+    <div class="contact">
+      <div class="contact2">Contact</div>
+    </div>
+    <div class="rectangle-10"></div>
+    <div class="frame-5">
+      <div class="explore">Explore</div>
+      <div class="about3">
+        <div class="about4">About</div>
+      </div>
+      <div class="food-review3">
+        <div class="food-review4">Food Review</div>
+      </div>
+      <div class="my-top-picks3">
+        <div class="my-top-picks4">My Top Picks</div>
+      </div>
+      <div class="contact3">
+        <div class="contact4">Contact</div>
+      </div>
+    </div>
+    <div class="frame-6">
+      <div class="follow-me">Follow Me</div>
+      <div class="instagram">
+        <div class="instagram2">Instagram</div>
+      </div>
+      <div class="linkedin">
+        <div class="linkedin2">Linkedin</div>
+      </div>
+    </div>
+    <div class="updates-news-sign-up-with-your-email">
+      Updates? News? Sign up with your email.
+    </div>
+    <div class="email">
+      <div class="rectangle-11"></div>
+      <div class="email-address">Email Address</div>
+    </div>
+    <div class="footer-sign-up">
+      <div class="rectangle-12"></div>
+      <div class="sign-up">Sign Up</div>
+    </div>
+    <div class="white-logo">
+      <div class="the-fan-club2">The Fan Club</div>
+      <div class="food-edition2">Food Edition</div>
+    </div>
+  </div>
+  
+</body>
+</html>
     
